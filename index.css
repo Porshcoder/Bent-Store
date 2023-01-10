@@ -2,7 +2,7 @@
     --primary:#a4916d;
     --black:#000;
     --white:white;
-    --light-black:#666;
+    --light-black:rgb(37, 37, 37);
     --hover:rgba(244,244,244,0.8);
     --bg:#f9f9f9;
     --border:1rem solid black;
@@ -42,13 +42,18 @@ html::-webkit-scrollbar-thumb{
     border-radius: 5rem;
 }
 
+section{
+    padding: 5rem 7%;
+}
+
+
 .header{
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    background: var(--white);
+    background: transparent;
     box-shadow: var(--box-shadow);
     display: flex;
     align-items: center;
@@ -60,10 +65,109 @@ html::-webkit-scrollbar-thumb{
     font-size: 2.5rem;
     font-weight: 600;
     color: var(--gold);
+    text-decoration: none;
 }
 
 .header .logo i{
-    color: var(--primary);
+    color: var(--white);
     padding-right: .5rem;
 }
 
+.header .navbar a{
+    font-size: 1.7rem;
+    color: gold;
+    margin: 0 1rem;
+text-decoration: none;
+}
+
+.header .navbar a:hover{
+    color: var(--primary);
+}
+
+.header .icons{
+    font-size: 2rem;
+    margin-left: 1.7rem;
+    color: var(--white);
+    cursor: pointer;
+    -webkit-text-stroke: .1rem --primary;
+}
+
+.header .icons:hover{
+    color: var(--primary);
+}
+
+#menu-bar{
+display: none;
+}
+
+.home{
+    min-height: 110vh;
+    display: flex;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(./image/IMG_3341.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+}
+
+.home .content{
+    max-width: 60rem;
+    padding-top: 8rem;
+}
+
+.home .content h3{
+    font-size: 7rem;
+    color: gold;
+    line-height: 1.2;
+}
+
+.home .content p{
+    font-size: 1.6rem;
+    padding: 1.8rem 0;
+    color: rgb(161, 161, 158);
+    line-height: 2;
+}
+
+.home .btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .9rem 3rem;
+    border-radius: 10rem ;
+    border: .1rem solid var(--primary);
+    font-size: 2rem;
+    color: rgb(161, 161, 158);
+    cursor: pointer;
+}
+
+.home .btn:hover{
+    background:gold;
+    color:white;
+}
+
+.banner .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    margin-top: 10px;
+    background: #000;
+    color: #fff;
+}
+
+.banner .box-container .box{
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner .box-container .box img{
+    height: 85%;
+    width: 95%;
+    object-fit: cover;
+}
+
+.banner .box-container .box:hover img{
+    transform: scale(1.1);
+}
+
+.banner  .box-container p{
+    font-size: 14px;
+}
